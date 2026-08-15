@@ -1,0 +1,21 @@
+{
+  "name": "dsh-market",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 插件市场：dsh-plugin topic + npm 关键字 → 归一化 index.json",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "sync": "node src/index.js",
+    "check": "node --check src/index.js && node --check src/lib/fetch.js && node --check src/lib/github.js && node --check src/lib/npm.js && node --check src/lib/normalize.js"
+  },
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "plugin",
+    "marketplace"
+  ],
+  "license": "MIT"
+}

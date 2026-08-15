@@ -1,0 +1,47 @@
+{
+  "name": "dsh-plugin-market",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 插件市场面板：浏览 / 搜索 / 一键复制安装 dsh-plugin 生态插件",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "index.json",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "marketplace",
+    "deepseek-harness"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.6"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

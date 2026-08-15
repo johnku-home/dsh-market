@@ -1,0 +1,4 @@
+# dsh-plugin-market 的 web 组合补丁：向组合插入一行，挂载本包。
+- insert:
+    - id: plugin-market
+      name: dsh-plugin-market
